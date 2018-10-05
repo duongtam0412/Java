@@ -1,0 +1,28 @@
+
+package HanhViCuaDoiTuong;
+
+/**
+ *
+ * @author ASUS
+ */
+//Cac cong dung cua tham chieu this trong phuong thuc
+public class MyInteger {
+    private int value;
+    public boolean greaterThan(MyInteger other){
+        //this dung de truy nhap bien thuc the
+        return (this.value>other.value);
+    }
+    public boolean lessThan(MyInteger other){
+        // this lam doi so
+        return (other.greaterThan(this));
+    }
+    public MyInteger increment(){
+        value++;
+        //this lam gia tri tra ve
+        return this;
+    }
+    public static void main(String[] args) {
+        MyInteger counter=new MyInteger();
+        counter.increment().increment();//tang 2 lan
+    }
+}
